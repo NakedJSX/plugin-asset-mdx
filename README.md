@@ -7,7 +7,7 @@ Given this MDX file:
 ```
 # Hello, world!
 
-<p css="color: fuchsia">And hello NakedJSX.</div>
+<p css="color: fuchsia">And hello NakedJSX.</p>
 ```
 
 this NakedJSX page:
