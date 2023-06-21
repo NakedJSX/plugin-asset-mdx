@@ -6,6 +6,9 @@
   "exports": {
     ".": "./plugin/index.mjs"
   },
+  "dependencies": {
+    "@mdx-js/mdx": "^2.3.0"
+  },
   "author": "David Hogan",
   "license": "BSD-3-Clause",
   "publishConfig": {
@@ -23,8 +26,5 @@
   "bugs": {
     "url": "https://github.com/NakedJSX/plugin-asset-mdx/issues"
   },
-  "homepage": "https://nakedjsx.org",
-  "dependencies": {
-    "@mdx-js/mdx": "^2.3.0"
-  }
+  "homepage": "https://nakedjsx.org"
 }
