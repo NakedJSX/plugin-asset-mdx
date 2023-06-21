@@ -1,34 +1,33 @@
 import fsp from 'node:fs/promises';
 import { compile } from '@mdx-js/mdx'
 
-let log;
-
 export default function(context)
 {
-    log = context.logging.log;
-
-    context.register(plugin);
+    context.register(
+        {
+            type: 'asset',
+            importAsset
+        });
 }
-
-const plugin =
-    {
-        type: 'asset',
-        importAsset
-    };
 
 async function importAsset(context, asset)
 {
     //
-    // Load the MDX file, compile it to JavaScript, and return the result to NakedJSX.
+    // Load the MDX file, compile it to JSX, and return the result to NakedJSX.
     //
 
     const compiled =
         await compile(
             await fsp.readFile(asset.file),
             {
-                jsxRuntime: 'automatic',
-                jsxImportSource: '@nakedjsx/core/page'
+                jsx: true
             });
 
-    return compiled.toString();
+    //
+    // The MDX compiler generates comments like
+    // '/*@jsxRuntime automatic @jsxImportSource react*/'
+    // which we don't want.
+    //
+    
+    return compiled.toString().replaceAll(/\s*\/\*@jsxRuntime.*?\*\/\s*/g, '');
 }

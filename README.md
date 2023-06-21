@@ -5,9 +5,9 @@ Given this MDX file:
 
 **src/test.mdx**
 ```
-# Hello, world!
+# Hello, MDX!
 
-<p css="color: fuchsia">And hello NakedJSX.</p>
+<p css="color: fuchsia">And hello again, NakedJSX.</p>
 ```
 
 this NakedJSX page:
@@ -44,8 +44,8 @@ Then the resulting file is:
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
-    <p class="a">And hello NakedJSX.</p>
+    <h1>Hello, MDX!</h1>
+    <p class="a">And hello again, NakedJSX.</p>
 </body>
 
 </html>
