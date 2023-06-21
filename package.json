@@ -1,0 +1,30 @@
+{
+  "name": "@nakedjsx/plugin-asset-mdx",
+  "version": "0.13.0-test.4",
+  "description": "Import MDX files as JSX elements to use within NakedJSX pages.",
+  "type": "module",
+  "exports": {
+    ".": "./plugin/index.mjs"
+  },
+  "author": "David Hogan",
+  "license": "BSD-3-Clause",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "nakedjsx",
+    "jsx",
+    "mdx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NakedJSX/plugin-asset-mdx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NakedJSX/plugin-asset-mdx/issues"
+  },
+  "homepage": "https://nakedjsx.org",
+  "dependencies": {
+    "@mdx-js/mdx": "^2.3.0"
+  }
+}
