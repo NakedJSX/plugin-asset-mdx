@@ -5,7 +5,7 @@ export default function(context)
 {
     context.register(
         {
-            type: 'asset-import',
+            type: 'asset',
             importAsset
         });
 }
