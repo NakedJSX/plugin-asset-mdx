@@ -1,6 +1,6 @@
 {
   "name": "@nakedjsx/plugin-asset-mdx",
-  "version": "0.14.4-test.0",
+  "version": "0.14.4",
   "description": "Import MDX files as JSX elements to use within NakedJSX pages.",
   "type": "module",
   "exports": {
